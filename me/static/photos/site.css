@@ -1,0 +1,41 @@
+.page{
+    background-image:url("header-bg.jpg");
+    background-repeat:no-repeat;
+    background-size:cover; 
+    }
+a{
+    float:right;
+    color:aqua;
+    text-decoration:none;
+    font-size:30px;
+    padding-right:30px;
+    }
+.links:a{
+    border:1px solid grey;
+    background-color:grey
+    }
+a:first-child{
+    float:left;
+    }
+a:hover{
+      color:white;
+      background-color:grey;
+}
+.wrapper{
+text-align:center;
+padding-top:20%;
+padding-bottom:330px;
+}
+.button{
+top:50%;
+margin-bottom:50px;
+}
+.wrapper:hover{
+color:white;
+}
+.sect{
+text-align:center;
+}
+.sect{
+background-color:aqua;
+}
