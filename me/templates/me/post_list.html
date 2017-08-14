@@ -1,0 +1,30 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Blog</title>
+<link rel ="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<style>
+    a{color:blue;}
+</style>
+<link rel = "stylesheet" href = "{% static 'photos/site.css' %}">
+<div class="links">
+<a style="color:white" href="{% url 'me:index' %}">DENNIS MOYO</a>
+<body style="background-color:aqua">
+{% for post in posts %}
+<center>
+    <h1>Bloggers Club</h1>
+<div class ="jumbotron">
+<h1 style="color:blue">{{post.title}}</h1>
+<p>A post by:<i style="color:aqua">{{post.author}}</i></p>
+</div>
+</center>
+<div class ="page-content">
+<p style="font-style:sans-serif">{{post.content}}</p>
+<p style="color:red">Published:<i>{{post.date_published}}</i></p>
+</div>
+{% endfor %}
+</body>
+</html>

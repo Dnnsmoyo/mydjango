@@ -8,10 +8,12 @@
 <div class ="page-header">
 <div class="links">
 <a style="color:white" href="#">DENNIS MOYO</a>
-<a href="#">Contact</a>
-<a href="#">Testimonials</a>
-<a href="#">Portfolio</a>
-<a href="#">Me</a>
+{% if user.is_authenticated %}
+    <a href="{% url 'me:post_edit' %}">Add</a>
+{% endif %}
+<a href = "{% url 'me:post_list' %}">Blog</a>
+<a href="#projects">Portfolio</a>
+<a href="#sect">Me</a>
 <a href="#">Home</a>
 </div>
 <div class="wrapper">
@@ -24,7 +26,7 @@
 {% block body %}
 <body><br>
 <center><p style="font-family:italic;font-size:30px";>'One programmer to rule them all'</p></center>
-<div style="background-color:aqua"class ="sect">
+<div style="background-color:aqua"id ="sect">
 <center><h1 style="font-size:35px;font-style:italic">About Me</h1></center>
 <center>
 <img src ="{% static 'photos/cybernetic_guy_hooded.jpg' %}" width="300">
@@ -71,11 +73,11 @@
 </center>
 <br>
 </div>
-<div class="projects">
+<div id="projects">
 <img src="{% static 'photos/DRF.png' %}" >
 </div>
 <br>
-<div class="contact">
+<div id="contact">
 </div>
 </body>
 {% endblock %}
