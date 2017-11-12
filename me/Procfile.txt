@@ -1,1 +1,0 @@
-web: gunicorn gettingstarted.wsgi| out-file -en ascii Procfile.txt
