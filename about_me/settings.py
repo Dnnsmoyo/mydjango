@@ -31,7 +31,7 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'ffr$v#)k-=6t%g(^6xgn^5r%uslf6v
 
 DEBUG = bool( os.environ.get('DJANGO_DEBUG', True) )
 
-ALLOWED_HOSTS = ["localhost"]
+ALLOWED_HOSTS = ["localhost","denyce.pythonanywhere.com"]
 
 
 # Application definition
